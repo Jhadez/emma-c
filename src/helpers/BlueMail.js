@@ -19,7 +19,7 @@ class BlueMail{
         var bodyData = {
 			"contact": email, //se debe sustituir email por el correo "robotics_gbsopscr@cr.ibm.com"
 			"recipients": [
-				{"recipient": "tvenegas@cr.ibm.com"}  //Sustituir a  Tonny por Direccion de correo "dsbillsm@bldvmb.vnet.ibm.com"         
+				{"recipient": "rgarcia@cr.ibm.com"}  //Sustituir a  Tonny por Direccion de correo "dsbillsm@bldvmb.vnet.ibm.com"         
 			],
 			"cc": [{"recipient": email }], //se debe sustituir email por correo "billadw1@us.ibm.com"
 			"subject": accName,
