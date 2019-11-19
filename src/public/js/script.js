@@ -8,27 +8,6 @@ $(document).ready(function () {
 
     fileSelected.addEventListener('change', handleFile, false);
 
-    // Another alternative to make de request
-    // $('form#frm_upload').submit(function(e)
-    //   {
-    //     // event.preventDefault();
-    //     var formData = new FormData(myForm);
-    //     alert(JSON.stringify(myForm));
-
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: '/upload',
-    //         data: formData,
-    //         processData: false,
-    //         contentType: false,
-    //         success: function(data){
-    //             console.log(data);
-    //         }
-    //     });
-    //     return false;
-
-    // });
-
     function uploadData(e){
         e.preventDefault();
         const myFor = document.getElementById("frm_upload");
@@ -56,16 +35,6 @@ $(document).ready(function () {
             })
             .catch(e => swal("Error", "Something wrong happened. Please try it again! " + e.toString(), "warning"));
 
-        // $.ajax({
-        //     type: 'POST',
-        //     url: '/upload',
-        //     data: formData,
-        //     processData: false,
-        //     contentType: false,
-        //     success: function(data){
-        //         console.log(data);
-        //     }
-        // });
         return false;
     }
 
