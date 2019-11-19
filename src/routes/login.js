@@ -13,15 +13,15 @@ const User = require("../models/User");
 
 // Create service provider 
 const sp_options = {
-  entity_id: "https://emma-file-converter.w3ibm.mybluemix.net:443/metadata.xml",
+  entity_id: "//url/net:443/metadata.xml",
   private_key: fs.readFileSync(path.join(`${__dirname}/../cert/key.pem`)).toString(),
   certificate: fs.readFileSync(path.join(`${__dirname}/../cert/cert.pem`)).toString(),
-  assert_endpoint: "https://emma-file-converter.w3ibm.mybluemix.net:443/assert"
+  assert_endpoint: "url/.net:443/assert"
 };
 const sp = new saml2.ServiceProvider(sp_options);
 
 const idp_options = {
-  sso_login_url: "https://w3id.alpha.sso.ibm.com/auth/sps/samlidp2/saml20/logininitial?RequestBinding=HTTPPost&PartnerId=https://emma-file-converter.w3ibm.mybluemix.net:443/metadata.xml&NameIdFormat=email&Target=https://emma-file-converter.w3ibm.mybluemix.net/assert",
+  sso_login_url: "//loginUrl",
   
 
   certificates: fs.readFileSync(path.join(`${__dirname}/../cert/w3id.sso.ibm.com`)).toString()
@@ -81,7 +81,7 @@ router.get('/test', async (req, res)=>{
 
     const user = new User();
     let response = 2;
-    response = await user.find_user("tvenegas@cr.ibm.com");
+    response = await user.find_user("sample@ibm.com");
     // console.log("response: "+response);
     res.status(200).send(response);
 });
