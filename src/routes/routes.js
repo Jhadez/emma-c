@@ -38,11 +38,11 @@ router.post('/upload', (req, res) => {
 
 router.get('/send',(req,res) => {
 	var bodyData = {
-			"contact": "tvenegas@cr.ibm.com",
+			"contact": "sample@ibm.com",
 			"recipients": [
-				{"recipient": "tvenegas@cr.ibm.com"}            
+				{"recipient": "sample@ibm.com"}            
 			],
-			"cc": [{"recipient": "tvenegas@cr.ibm.com"}],
+			"cc": [{"recipient": "sample@ibm.com"}],
 			"subject": "BlueMail Test",
 			"message": "Testing the email service. Defaults selected.",
 			"attachments": [
@@ -57,15 +57,15 @@ router.get('/send',(req,res) => {
 		
 		};
 		  
-	var username = "a3ed264a-d408-404b-864b-3dce33283afb";
-	var password =  "dcbdd1eb-0e7e-4a88-ad53-103691506e34";
+	var username = "//USERNAME";
+	var password =  "//PASSWORD";
 		  
 	var base64uid = new Buffer(username + ":" + password).toString('base64');
    
    	var https = require('https');
 		  
 		var options = {
-			host: 'bluemail.w3ibm.mybluemix.net',
+			host: '//IBM_MAIL_SERVICE',
 			port: 443,
 			path: '/rest/v2/emails',
 			method: 'POST',  
