@@ -17,11 +17,11 @@ class BlueMail{
 
     sendMail(attached, file_name, email, accName){
         var bodyData = {
-			"contact": email, //se debe sustituir email por el correo "robotics_gbsopscr@cr.ibm.com"
+			"contact": email, 
 			"recipients": [
-				{"recipient": "rgarcia@cr.ibm.com"}  //Sustituir a  Tonny por Direccion de correo "dsbillsm@bldvmb.vnet.ibm.com"         
+				{"recipient": "sample@ibm.com"}           
 			],
-			"cc": [{"recipient": email }], //se debe sustituir email por correo "billadw1@us.ibm.com"
+			"cc": [{"recipient": email }], 
 			"subject": accName,
 			"message": " ",
 			"attachments": [
