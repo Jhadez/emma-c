@@ -29,7 +29,7 @@
     "nano": "^8.1.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "saml2-js": "^2.0.3",
+    "saml2-js": "^2.0.5",
     "saml2js": "^0.1.2",
     "xlsx": "^0.15.0"
   }
